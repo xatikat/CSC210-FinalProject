@@ -7,7 +7,7 @@ navHoverArea.addEventListener('mouseenter', () => {
 })
 
 navHoverArea.addEventListener('mouseleave', () => {
-    navbar.style.top = "-128px";
+    navbar.style.top = "-108px";
     navbar.style.opacity = 0.7;
     navbar.style.transform = "scale(0.9)";
 })

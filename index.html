@@ -1,31 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Helloooooo</title>
+        <title>Jake Kostenko - Portfolio</title>
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/navbar.css">
         <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/image-carousel.css">
         <script src="js/menu.js"></script>
+        <script src="js/onload.js"></script>
         
     </head>
     <body>
-        <img class="background" src="assets/background.jpg">
+        <div id='decorations' class="decorations">
+            <img class="cat-1" src="assets/cats/cat_1.png">
+            <img class="cat-2" src="assets/cats/cat_2.png">
+            <img class="cat-3" src="assets/cats/cat_3.png">
+            <img class="cat-4" src="assets/cats/cat_4.png">
+            <img class="cat-group" src="assets/cats/cat_group.png">
+            <img class="flower-1" src="assets/flowers/flowers_1.png">
+            <img class="flower-2" src="assets/flowers/flowers_2.png">
+            <img class="flower-3" src="assets/flowers/flowers_3.png">
+            <img class="flower-4" src="assets/flowers/flowers_8.png">
+        </div>
 
         <div id="nav-hover-area" class="nav-area">
             <nav id="navbar" class="navbar">
-                <p class="selected"><a href="index.html">Home</a></p>
-                <p><a href="skills.html">Skills</a></p>
-                <p><a href="projects.html">Projects</a></p>
-                <p><a href="interests.html">Interests</a></p>
-                <p><a href="aboutme.html">About Me</a></p>
+                <div id="nav-links" class="nav-links">
+                    <p class="selected"><a>Home</a></p>
+                    <p><a href="skills.html">Skills</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p><a href="interests.html">Interests</a></p>
+                    <p><a href="aboutme.html">About Me</a></p>
+                </div>
+                <p id="menu-handle" class="menu-handle">MENU</p>
             </nav>
         </div>
 
         <main>
-            <h1>Home</h1>
-            <p>Test paragraph blah</p>
+            <h1>Jake's Portfolio</h1>
+
+            
+            <!-- hopefully, this can still count as full points, even tho i did not use setInterval -->
+            <!-- wrote it all myself, spent a good amount of time figuring out how i wanted it to work, but was fun -->
+            <div id="image-carousel" class="image-carousel">
+                <h2>Photos of Mine</h2>
+                <button id="btn-prev" class="btn-previous btn-active"><</button>
+                <button id="btn-next" class="btn-next btn-active">></button>
+                <div id="image-1" class="img-active">
+                    <img src="assets/image-carousel/image_1.jpg" width="500">
+                    <p>Off the shore of Iceland.</p>
+                </div>
+                <div id="image-2" class="img-inactive">
+                    <img src="assets/image-carousel/image_7.jpg" width="500">
+                    <p>Morning view in Portugal.</p>
+                </div>
+                <div id="image-3" class="img-inactive">
+                    <img src="assets/image-carousel/image_14.jpg" width="500">
+                    <p>Beautiful view at a National Park in Utah.</p>
+                </div>
+                <div id="image-4" class="img-inactive">
+                    <img src="assets/image-carousel/image_4.jpg" width="500">
+                    <p>One of my cats, Chubbs!</p>
+                </div>
+                <div id="image-5" class="img-inactive">
+                    <img src="assets/image-carousel/image_12.jpg" width="500">
+                    <p>Nice little saying.</p>
+                </div>
+                <div id="image-6" class="img-inactive">
+                    <img src="assets/image-carousel/image_13.jpg" width="500">
+                    <p>Off the shore of Portugal.</p>
+                </div>
+            </div>
+
+            <div id="quote-of-day" class="quote">
+                <h2>Quote of the Day</h2>
+                <div>
+                    <p id="quote-text" class="quote"></p>
+                    <p id="author-text" class="author"></p>
+                </div>
+            </div>
+
         </main>
 
         <script src="js/navbar-anim.js"></script>
+        <script src="js/quote.js"></script>
+        <script src="js/image-carousel.js"></script>
     </body>
 </html>

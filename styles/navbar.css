@@ -1,5 +1,5 @@
 div.nav-area {
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -8,29 +8,52 @@ div.nav-area {
     height: 148px; /* equal above and below at the moment, check again once done styling */
     width: 100%;
     box-sizing: border-box;
-    /*border: 4px solid green;*/
+    /*border: 4px solid green;*/   
 }
 
 nav {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     box-sizing: border-box;
-    width: 800px;
     top: 16px;
-    /*top: -12vh;*/
     left: calc(50% - (800px/2));
-    padding: 8px;
-    background-color: black;
-    color: white;
     opacity: 1; /* 0.7 when hidden */
     transform: scale(1); /* 1 when hidden */
     transition: top 0.5s, opacity 0.5s, transform 0.5s;
+    font-family: monospace;
+    font-weight: 900;
 }
 
-nav > p {
+nav > p.menu-handle {
+    z-index: -1;
+    width: 10%;
+    top: -17px;
+    left: calc(50% - 10%/2);
+    padding: 16px 0 8px 0;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(35, 46, 48);
+    color: rgb(242,242,242);
+    user-select: none;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 2px;
+}
+
+nav > div.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    width: 800px;
+    /*top: -12vh;*/
+    padding: 8px;
+    background-color: rgb(35, 46, 48);
+    color: rgb(149,159,161);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 2px;
+}
+
+nav > div.nav-links > p {
     width: auto;
     margin: 16px;
     padding: 16px;
@@ -40,27 +63,24 @@ nav > p {
         transform 0.2s ease-out,
         color 0.2s,
         background-color 0.2s;
+    user-select: none;
 }
 
-nav > p > a {
+nav > div.nav-links > p > a {
     padding: 16px 0;
     text-decoration: none;
     color: inherit;
     pointer-events: auto;
 }
 
-nav > p:hover {
+nav > div.nav-links > p:hover {
     transform: scale(1.05);
-    background-color: white;
-    color: black;
-    transition: 
-        transform 0.2s ease-out,
-        color 0.2s,
-        background-color 0.2s;
+    background-color: rgb(149,159,161);
+    color: rgb(35, 46, 48);
 }
 
-nav > p.selected {
-    background-color: white;
-    color: black;
+nav > div.nav-links > p.selected {
+    background-color: rgb(149,159,161); 
+    color: rgb(35, 46, 48);
     transform: scale(1.05);
 }
