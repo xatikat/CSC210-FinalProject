@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     background-color: rgb(57, 74, 78);
 }
 
@@ -68,19 +68,19 @@ div.decorations > img {
 img.cat-1 {
     top: 7%;
     left: 13%;
-    transform: rotate(20deg);
+    /*transform: rotate(20deg);*/
 }
 
 img.cat-2 {
     top: 48%;
     right: 3%;
-    transform: rotate(-16deg);
+    /*transform: rotate(-16deg);*/
 }
 
 img.cat-3 {
     top: 84%;
     left: 4%;
-    transform: rotateY(180deg) rotate(32deg);
+    /*transform: rotateY(180deg) rotate(32deg);*/
 }
 
 img.cat-4 {
@@ -97,13 +97,13 @@ img.cat-group {
 img.flower-1 {
     top: 8%;
     right: 13%;
-    transform: rotate(36deg);
+    /*transform: rotate(36deg);*/
 }
 
 img.flower-2 {
     top: 46%;
     left: 4%;
-    transform: rotate(-104deg);
+    /*transform: rotate(-104deg);*/
 }
 
 img.flower-3 {

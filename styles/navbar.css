@@ -14,8 +14,9 @@ div.nav-area {
 nav {
     position: fixed;
     box-sizing: border-box;
+    width: 650px;
     top: 16px;
-    left: calc(50% - (800px/2));
+    left: calc(50% - (650px/2));
     opacity: 1; /* 0.7 when hidden */
     transform: scale(1); /* 1 when hidden */
     transition: top 0.5s, opacity 0.5s, transform 0.5s;
@@ -45,7 +46,6 @@ nav > div.nav-links {
     align-items: center;
     box-sizing: border-box;
     text-align: center;
-    width: 800px;
     /*top: -12vh;*/
     padding: 8px;
     background-color: rgb(35, 46, 48);

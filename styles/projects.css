@@ -1,0 +1,90 @@
+    div.project-page {
+        width: 50vw;
+        min-width: 550px;
+        padding: 48px 32px;
+        background-color: rgb(35, 46, 48);
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 32px;
+        box-sizing: border-box;
+        align-content: center;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 16px 2px inset;
+    }
+
+    div.project-page > p {
+        width: 100%;
+        padding: 32px;
+        margin: 0;
+        box-sizing: border-box;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: rgb(81,96,99);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 2px;
+    }
+
+    div.project-panel {
+        position: relative;
+        box-sizing: border-box;
+        place-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 20vw;
+        min-width: 240px;
+        min-height: 280px;
+        padding: 16px;
+        background-color: rgb(81,96,99);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 2px;
+        pointer-events: auto;
+        transition: transform .8s, opacity .8s, left .8s;
+    }
+
+    div.project-page:has(div.project-panel:hover) > div.project-panel:not(:hover) {
+        z-index: 0;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    div.project-panel:hover {
+        z-index: 1;
+    }
+
+    div.panel1:hover {
+        transform: scale(1.9) translate(25%, 25%);
+    }
+
+    div.panel2:hover {
+        transform: scale(1.9) translate(-25%, 25%);
+    }
+
+    div.panel3:hover {
+        transform: scale(1.9) translate(25%, -25%);
+    }   
+
+    div.panel4:hover {
+        transform: scale(1.9) translate(-25%, -25%);
+    }
+
+    div.project-panel > img {
+        max-height: 100px;
+        width: auto;
+        margin: 8px;
+    }
+
+    div.project-panel > h3 {
+        margin: 4px;
+    }
+
+    div.project-panel > h4 {
+        margin: 4px;
+        font-weight: normal;
+    }
+
+    div.project-panel > p {
+        margin: 4px;
+        font-size: 12px;
+    }
+
